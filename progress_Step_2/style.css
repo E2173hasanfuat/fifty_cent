@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Muli&display=swap");
+
+:root {
+  --line-border-fill: #3498db;
+  --line-border-empty: #e0e0e0;
+}
+* {
+  box-sizing: border-box;
+}
+/* allows us to include the padding and border in an element's total width and height */
+body {
+  background-color: f6f7fb;
+  font-family: "Muli", sans-serif;
+  display: flex;
+  /* row seklinde dizer */
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  text-align: center;
+}
+
+.progress-container {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-bottom: 30px;
+  max-width: 100%;
+  width: 350px;
+}
+.progress-container::before {
+  /* gri hali */
+  content: "";
+  /* before yada after koydugun zaman opacity 1 olmasi icin content acman lazim bu sekil */
+  background-color: var(--line-border-empty);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 4px;
+  width: 100%;
+  /* bos halinin temsil ettigi icin sonuna kadar gri olarak default kalacak */
+  z-index: -1;
+}
+/* circle active e gelene kadar renkleri mevcut kullan */
+.progress {
+  background-color: var(--line-border-fill);
+  /* mavi hali */
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  /* ortanın da ortasında olmasını ıstıyorum */
+  height: 4px;
+  /* cubuk x yukseklıgı */
+  width: 0%;
+  /* cubuk ılermesı genıslık y eksenınde */
+  /* bu hali startigin pointi */
+  z-index: -1;
+  transition: 0.4s ease;
+  /* next e tıklayınca flıp degılde yavasca ılermesı ıcın */
+}
+
+.circle {
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 30px;
+  width: 30px;
+  display: flex;
+  justify-content: center;
+  border: 3px solid var(--line-border-empty);
+  transition: 0.4s ease;
+}
+
+.circle.active {
+  border-color: var(--line-border-fill);
+}
+
+.btn {
+  background-color: var(--line-border-fill);
+  color: #fff;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  font-family: inherit;
+  /* initial	Sets this property to its default value.
+  	Inherits : from its parent element */
+  padding: 8px 30px;
+  margin: 5px;
+  font-size: 14px;
+}
+.btn:active {
+  transform: scale(0.98);
+}
+.btn:focus {
+  outline: 0;
+}
+.btn:disabled {
+  background-color: var(--line-border-empty);
+  cursor: not-allowed;
+}
