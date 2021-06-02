@@ -1,9 +1,9 @@
-const search = document.querySelector(".search");
-const btn = document.querySelector(".btn");
-const input = document.querySelector(".input");
+const mehmet = document.querySelector(".search");
+const ali = document.querySelector(".btn");
+const yusuf = document.querySelector(".input");
 
-btn.addEventListener("click", () => {
-  search.classList.toggle("active");
+ali.addEventListener("click", () => {
+  mehmet.classList.toggle("active");
   //   add or remove
-  input.focus();
+  yusuf.focus();
 });
