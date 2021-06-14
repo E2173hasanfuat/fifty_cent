@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="hero">
+      <div class="nav-bar">
+        <div class="nav-logo">
+          <img src="./img/tobias-roder-x60YFtdOsGU-unsplash.jpg" alt="" />
+        </div>
+        <div class="nav-links" id="nav-links">
+            <i class="fa fa-close" onclick="closeMenu()"></i>
+          <ul>
+            <a href="#"><li>home</li></a>
+            <a href="#"><li>about</li></a>
+            <a href="#"><li>recipe</li></a>
+          </ul>
+          <button type="button" class="btn">sign up</button>
+        </div>
+        <i class="fa fa-bars" onclick="showMenu()"></i>
+      </div>
+      <div class="banner-title">
+        <h1>
+          food <span>deoent have <br />a religion.</span>it is a religion
+        </h1>
+        <button type="button" class="btn">EXPLORE</button>
+      </div>
+      <div class="vertical-bar">
+        <div class="search-icon">
+          <i class="fa fa-th-list"></i> <i class="fa fa-search"></i>
+        </div>
+        <div class="social-icon">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-pinterest"></i>
+        </div>
+      </div>
+      <div class="notifications">
+          <div class="contents">
+              <small>subscribe easy tutprials youtube vhannel and never miss any videos</small>
+              <p><a href="#">PREV</a><a href="#">next</a></p>
+          </div>
+          <div class="notifications-img"><img src="./img/small.jpg" alt="">
+
+          </div>
+      </div>
+    </div>
+    <script>
+        var show = document.getElementById ("nav-links");
+        function showMenu(){
+            show.style.right = "0";
+
+        }
+        function closeMenu(){
+            show.style.right = "-200px";
+
+        }
+    </script>
+  </body>
+</html>
